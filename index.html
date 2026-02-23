@@ -89,27 +89,57 @@
 <main>
 
   <div class="header">
-    <!-- Strider walking away: long coat, wide-brim hat, mid-stride -->
-    <svg width="64" height="108" viewBox="0 0 100 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Feather -->
-      <path d="M76 34 Q90 18 85 6 Q92 14 88 26 Q94 16 90 7 Q99 14 84 32"
-            fill="#888" stroke="#888" stroke-width="0.5"/>
-      <!-- Hat crown (back view) -->
-      <path d="M24 38 Q22 13 50 10 Q78 13 76 38 Z" fill="#111"/>
-      <!-- Hat brim -->
-      <ellipse cx="50" cy="40" rx="33" ry="8" fill="#111"/>
-      <!-- Long coat -->
-      <path d="M29 52 Q28 50 50 47 Q72 50 71 52 Q78 96 74 138 Q63 148 50 146 Q37 148 26 138 Q22 96 29 52 Z" fill="#111"/>
-      <!-- Coat hem split -->
-      <path d="M50 118 Q47 134 43 146 L57 146 Q53 134 50 118 Z" fill="#fff"/>
-      <!-- Left leg (stepping forward) -->
-      <path d="M43 143 Q37 155 32 166" stroke="#111" stroke-width="8" stroke-linecap="round"/>
-      <!-- Right leg (pushing off) -->
-      <path d="M57 143 Q64 156 70 170" stroke="#111" stroke-width="8" stroke-linecap="round"/>
-      <!-- Left boot -->
-      <path d="M28 164 Q29 170 42 169 Q40 163 32 163 Z" fill="#111"/>
-      <!-- Right boot -->
-      <path d="M67 169 Q71 175 80 172 Q77 165 69 167 Z" fill="#111"/>
+    <!-- Wayfarer: side profile facing left, wide-brim hat, long coat, smoking pipe -->
+    <svg width="64" height="108" viewBox="0 0 95 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Smoke wisps rising from pipe bowl -->
+      <path d="M10 48 Q6 42 10 36 Q14 30 10 24" stroke="#ccc" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M17 47 Q13 41 17 35 Q21 29 17 23" stroke="#ddd" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+      <!-- Hat crown (side profile, tall, slightly forward-tilt) -->
+      <path d="M28 44 L30 12 Q31 7 37 7 L65 7 Q70 8 69 13 L66 44 Z" fill="#111"/>
+
+      <!-- Hat brim (side — extends far forward/left, short back/right) -->
+      <path d="M6 44 Q6 40 10 40 L72 40 Q76 40 76 44 L76 50 Q76 54 72 54 L6 50 Q4 49 6 44 Z" fill="#111"/>
+
+      <!-- Head (profile, right side) -->
+      <ellipse cx="64" cy="68" rx="14" ry="15" fill="#111"/>
+
+      <!-- Pipe stem from mouth, going left -->
+      <path d="M50 72 Q34 73 24 67" stroke="#111" stroke-width="4.5" stroke-linecap="round"/>
+
+      <!-- Pipe bowl (opens upward) -->
+      <path d="M16 67 L14 55 Q14 51 18 51 L28 51 Q32 51 32 55 L30 67 Z" fill="#111"/>
+
+      <!-- Neck -->
+      <path d="M58 82 L60 76 Q61 73 65 73 L70 73 Q74 73 74 77 L73 82 Z" fill="#111"/>
+
+      <!-- Long coat body (profile, left-facing — front edge left, back edge right) -->
+      <path d="
+        M34 92
+        Q32 89 65 86
+        Q80 88 80 92
+        Q84 118 80 148
+        Q68 157 54 155
+        Q38 154 30 142
+        Q26 120 34 92 Z
+      " fill="#111"/>
+
+      <!-- Coat front lapel line -->
+      <path d="M52 90 Q48 122 46 155" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.25" stroke-linecap="round"/>
+
+      <!-- Front leg (stepping left/forward) -->
+      <path d="M44 152 Q36 162 28 174" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Back leg -->
+      <path d="M60 152 Q66 163 70 175" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Front boot -->
+      <path d="M24 172 Q26 178 40 177 Q38 170 30 171 Z" fill="#111"/>
+
+      <!-- Back boot -->
+      <path d="M67 174 Q70 180 80 177 Q78 170 70 172 Z" fill="#111"/>
+
     </svg>
 
     <div class="name">jenyadoesapps</div>
