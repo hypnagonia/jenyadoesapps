@@ -89,55 +89,59 @@
 <main>
 
   <div class="header">
-    <!-- Snufkin: front-facing, iconic wide-brim hat dominating, tiny face beneath -->
-    <svg width="68" height="108" viewBox="0 0 102 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Snufkin-style wanderer, mirrored horizontally -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="90" height="90">
+      <defs>
+        <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="0.6"/>
+        </filter>
+      </defs>
 
-      <!-- Hat crown — tall, slightly tapered toward top -->
-      <path d="M36 44 L38 8 Q39 3 45 3 L59 3 Q65 3 64 8 L62 44 Z" fill="#111"/>
+      <!-- mirror everything: translate(800,0) scale(-1,1) -->
+      <g transform="translate(800,0) scale(-1,1)">
 
-      <!-- Feather tucked left side of crown -->
-      <path d="M38 38 Q28 24 32 12 Q34 22 30 30 Q36 20 40 11 Q38 22 36 38" fill="#666"/>
+        <!-- ground pebbles -->
+        <g fill="#111">
+          <ellipse cx="140" cy="705" rx="16" ry="6"/>
+          <ellipse cx="176" cy="712" rx="10" ry="4"/>
+          <ellipse cx="620" cy="712" rx="18" ry="6"/>
+          <ellipse cx="665" cy="705" rx="12" ry="4"/>
+          <ellipse cx="695" cy="716" rx="9" ry="3.5"/>
+        </g>
 
-      <!-- Hat brim — very wide, the defining Snufkin shape -->
-      <ellipse cx="50" cy="46" rx="44" ry="9" fill="#111"/>
+        <!-- silhouette -->
+        <g fill="#111" stroke="none">
+          <path d="M360 245 C338 270, 320 305, 318 345 C315 400, 345 450, 332 515 C322 565, 295 615, 285 655 C278 684, 305 700, 338 696 C388 690, 430 664, 462 640 C498 613, 524 575, 540 532 C560 477, 550 430, 548 390 C546 345, 532 315, 512 290 C485 256, 452 235, 410 230 C390 228, 372 233, 360 245 Z"/>
+          <path d="M392 285 C360 300, 335 315, 315 330 C295 345, 300 365, 323 365 C350 365, 378 350, 412 335 C448 319, 474 306, 492 296 C520 280, 510 255, 486 262 C462 270, 430 276, 392 285 Z"/>
+          <ellipse cx="455" cy="245" rx="34" ry="30"/>
+          <path d="M400 240 C420 215, 455 205, 495 212 C535 220, 560 245, 552 264 C544 283, 508 286, 470 281 C432 276, 392 262, 400 240 Z"/>
+          <path d="M430 225 C446 198, 486 188, 515 201 C542 214, 552 242, 536 258 C520 274, 482 268, 455 258 C434 250, 420 241, 430 225 Z"/>
+          <path d="M525 198 C552 160, 600 150, 632 175 C610 178, 585 190, 570 210 C560 223, 545 222, 535 214 C528 209, 522 204, 525 198 Z"/>
+          <path d="M585 172 C610 155, 635 156, 660 175 C635 182, 615 195, 600 215 C592 226, 575 184, 585 172 Z"/>
+          <path d="M265 360 C220 380, 185 420, 182 470 C179 525, 214 560, 270 565 C325 570, 372 535, 378 485 C384 438, 350 395, 310 372 C295 363, 281 356, 265 360 Z"/>
+          <path d="M410 285 C360 305, 330 325, 305 355 C292 371, 310 388, 328 378 C352 365, 380 345, 424 326 C454 313, 470 300, 480 287 C492 272, 446 270, 410 285 Z"/>
+          <path d="M520 360 C560 352, 604 352, 650 364 C668 369, 676 392, 662 404 C646 418, 624 410, 604 405 C576 398, 552 396, 528 400 C510 403, 500 389, 504 376 C507 366, 512 362, 520 360 Z"/>
+          <path d="M654 365 C690 355, 716 362, 732 378 C742 389, 735 404, 720 405 C702 406, 688 395, 675 388 C668 384, 662 382, 654 381 Z"/>
+          <rect x="642" y="362" width="24" height="10" rx="5" ry="5"/>
+          <path d="M732 378 C748 372, 760 378, 764 390 C768 402, 758 412, 744 409 C736 407, 730 401, 729 394 Z"/>
+          <path d="M365 640 C350 668, 342 692, 350 705 C360 722, 388 716, 399 704 C414 688, 420 668, 425 646 C428 633, 372 628, 365 640 Z"/>
+          <path d="M438 630 C458 658, 472 685, 468 703 C463 723, 434 723, 420 709 C405 693, 400 668, 398 645 C397 633, 430 620, 438 630 Z"/>
+        </g>
 
-      <!-- Head — small, tucked just under the brim -->
-      <circle cx="50" cy="66" r="15" fill="#111"/>
+        <!-- smoke wisps -->
+        <g fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" filter="url(#soft)" opacity="0.9">
+          <path d="M742 350 C726 330, 734 312, 756 300 C780 286, 784 268, 766 252"/>
+          <path d="M718 344 C706 326, 712 312, 732 302 C750 293, 754 280, 742 268"/>
+        </g>
 
-      <!-- Eyes — white ovals -->
-      <ellipse cx="43" cy="63" rx="3.5" ry="4" fill="white"/>
-      <ellipse cx="57" cy="63" rx="3.5" ry="4" fill="white"/>
-      <!-- Pupils — looking slightly down (wandering gaze) -->
-      <circle cx="44" cy="65" r="2" fill="#111"/>
-      <circle cx="58" cy="65" r="2" fill="#111"/>
-      <!-- Eye shine -->
-      <circle cx="43.5" cy="63.5" r="0.8" fill="white"/>
-      <circle cx="57.5" cy="63.5" r="0.8" fill="white"/>
+        <!-- small grass -->
+        <g fill="none" stroke="#111" stroke-width="4" stroke-linecap="round">
+          <path d="M120 700 C112 680, 120 665, 128 652"/>
+          <path d="M150 705 C146 688, 154 675, 164 662"/>
+          <path d="M690 706 C684 690, 692 676, 704 662"/>
+        </g>
 
-      <!-- Nose -->
-      <ellipse cx="50" cy="69" rx="1.8" ry="1.3" fill="#444"/>
-
-      <!-- Gentle smile -->
-      <path d="M45 74 Q50 79 55 74" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-
-      <!-- Neck -->
-      <rect x="44" y="80" width="12" height="8" rx="3" fill="#111"/>
-
-      <!-- Long coat — wide hem, slight flare -->
-      <path d="M24 90 Q22 87 50 84 Q78 87 76 90 Q82 116 78 140 Q65 149 50 148 Q35 149 22 140 Q18 116 24 90 Z" fill="#111"/>
-
-      <!-- Coat front seam -->
-      <path d="M50 90 L50 148" stroke="white" stroke-width="1.2" opacity="0.18" fill="none"/>
-
-      <!-- Left arm -->
-      <path d="M24 94 Q11 104 10 116" stroke="#111" stroke-width="9" stroke-linecap="round" fill="none"/>
-      <!-- Right arm -->
-      <path d="M76 94 Q89 104 90 116" stroke="#111" stroke-width="9" stroke-linecap="round" fill="none"/>
-
-      <!-- Hands -->
-      <circle cx="10" cy="118" r="5" fill="#ddd" stroke="#111" stroke-width="1.2"/>
-      <circle cx="90" cy="118" r="5" fill="#ddd" stroke="#111" stroke-width="1.2"/>
-
+      </g>
     </svg>
 
     <div class="name">jenyadoesapps</div>
