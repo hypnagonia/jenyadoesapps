@@ -52,20 +52,23 @@
     .contact a { color: #111; text-decoration: none; border-bottom: 1px solid #111; }
     .contact a:hover { color: #666; border-color: #666; }
 
-    /* coffee icon */
-    .coffee {
+    /* icon links */
+    .icons { display: flex; align-items: center; gap: 0.9rem; }
+
+    .icon-link {
       display: inline-flex;
       align-items: center;
       color: #bbb;
       text-decoration: none;
+      border-bottom: none !important;
       position: relative;
       transition: color 0.15s;
     }
-    .coffee:hover { color: #111; }
-    .coffee svg { display: block; }
+    .icon-link:hover { color: #111; border-bottom: none !important; }
+    .icon-link svg { display: block; }
 
-    .coffee::after {
-      content: 'buy me a coffee';
+    .icon-link[data-tip]::after {
+      content: attr(data-tip);
       position: absolute;
       bottom: calc(100% + 6px);
       right: 0;
@@ -79,7 +82,7 @@
       pointer-events: none;
       transition: opacity 0.15s;
     }
-    .coffee:hover::after { opacity: 1; }
+    .icon-link:hover::after { opacity: 1; }
   </style>
 </head>
 <body>
@@ -125,16 +128,24 @@
   <div class="contact">
     <span>// 2026</span>
     <a href="mailto:i@jenyadoesapps.com">i@jenyadoesapps.com</a>
-    <a class="coffee" href="https://buymeacoffee.com/hypnagoniaa" target="_blank" rel="noopener">
-      <!-- coffee cup icon -->
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-        <line x1="6" y1="1" x2="6" y2="4"/>
-        <line x1="10" y1="1" x2="10" y2="4"/>
-        <line x1="14" y1="1" x2="14" y2="4"/>
-      </svg>
-    </a>
+    <div class="icons">
+      <a class="icon-link" data-tip="linkedin" href="https://www.linkedin.com/in/zunso/" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+      <a class="icon-link" data-tip="buy me a coffee" href="https://buymeacoffee.com/hypnagoniaa" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="1" x2="6" y2="4"/>
+          <line x1="10" y1="1" x2="10" y2="4"/>
+          <line x1="14" y1="1" x2="14" y2="4"/>
+        </svg>
+      </a>
+    </div>
   </div>
 
 </main>
