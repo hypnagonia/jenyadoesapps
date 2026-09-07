@@ -67,6 +67,44 @@
     .icon-link:hover { color: #111; border-bottom: none !important; }
     .icon-link svg { display: block; }
 
+    .works { margin-top: 2.25rem; }
+
+    .works-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 0.85rem;
+    }
+
+    .work {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      transition: border-color 0.15s;
+    }
+    .work:first-of-type { border-top: 1px solid #eee; }
+    .work:hover { border-color: #111; }
+
+    .work-title {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      color: #111;
+    }
+
+    .work-title .arrow {
+      margin-left: auto;
+      color: #ddd;
+      font-size: 12px;
+      transition: color 0.15s, transform 0.15s;
+    }
+    .work:hover .arrow { color: #111; transform: translateX(2px); }
+
+    .work-desc { color: #888; font-size: 12.5px; }
+
     .icon-link[data-tip]::after {
       content: attr(data-tip);
       position: absolute;
@@ -103,6 +141,30 @@
     Based on the idea that software can be quiet and intentional —
     like a wanderer who only carries what matters.
   </p>
+
+  <div class="works">
+    <div class="works-label">Work</div>
+
+    <a class="work" href="https://dereverb.jenyadoesapps.com/" target="_blank" rel="noopener">
+      <span class="work-title">dereverb <span class="arrow">&#8599;</span></span>
+      <span class="work-desc">remove reverb and noise from audio, in the browser</span>
+    </a>
+
+    <a class="work" href="https://github.com/jenyanepoimannykh-it/dereverb-vst3" target="_blank" rel="noopener">
+      <span class="work-title">dereverb vst3 / au <span class="arrow">&#8599;</span></span>
+      <span class="work-desc">the same engine as a plugin for your daw</span>
+    </a>
+
+    <a class="work" href="https://chromewebstore.google.com/detail/tab-subtitles/egbheogpojgfgidcjffloaepeefbfobd" target="_blank" rel="noopener">
+      <span class="work-title">tab subtitles <span class="arrow">&#8599;</span></span>
+      <span class="work-desc">private captions for any tab, nothing leaves your machine</span>
+    </a>
+
+    <a class="work" href="https://github.com/hypnagonia/rag" target="_blank" rel="noopener">
+      <span class="work-title">rag <span class="arrow">&#8599;</span></span>
+      <span class="work-desc">a compact retrieval-augmented generation setup</span>
+    </a>
+  </div>
 
   <div class="contact">
     <span>// 2026</span>
