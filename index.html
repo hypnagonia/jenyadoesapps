@@ -74,11 +74,9 @@
       text-decoration: none;
       color: inherit;
       padding: 0.5rem 0;
-      border-bottom: 1px solid #eee;
-      transition: border-color 0.15s;
     }
-    .work:last-of-type { border-bottom: none; }
-    .work:hover { border-color: #111; }
+    .work:first-of-type { border-top: 1px solid #eee; }
+    .work:hover .work-desc { color: #555; }
 
     .work-title {
       display: flex;
@@ -95,7 +93,7 @@
     }
     .work:hover .arrow { color: #111; transform: translateX(2px); }
 
-    .work-desc { color: #888; font-size: 12.5px; }
+    .work-desc { color: #888; font-size: 12.5px; transition: color 0.15s; }
 
     .icon-link[data-tip]::after {
       content: attr(data-tip);
@@ -162,7 +160,7 @@
     <div class="icons">
       <a class="icon-link" data-tip="linkedin" href="https://www.linkedin.com/in/zunso/" target="_blank" rel="noopener">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM2.4 9.5h5.16V21H2.4V9.5zm7.3 0h4.95v1.57h.07c.69-1.24 2.38-2.55 4.9-2.55 5.24 0 6.21 3.29 6.21 7.57V21h-5.16v-4.86c0-1.16-.02-2.65-1.68-2.65-1.68 0-1.94 1.26-1.94 2.57V21H9.7V9.5z"/>
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
         </svg>
       </a>
       <a class="icon-link" data-tip="github" href="https://github.com/hypnagonia" target="_blank" rel="noopener">
