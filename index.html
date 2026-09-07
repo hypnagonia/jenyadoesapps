@@ -67,33 +67,40 @@
     .icon-link:hover { color: #111; border-bottom: none !important; }
     .icon-link svg { display: block; }
 
-    .works { margin-top: 2.25rem; }
+    .works {
+      margin-top: 2.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+      color: #444;
+    }
 
     .work {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      padding: 0.5rem 0;
-    }
-    .work:first-of-type { border-top: 1px solid #eee; }
-    .work:hover .work-desc { color: #555; }
-
-    .work-title {
-      display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
       color: #111;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      position: relative;
+      transition: border-color 0.15s;
     }
+    .work:hover { border-color: #111; }
 
-    .work-title .arrow {
-      margin-left: auto;
-      color: #ddd;
-      font-size: 12px;
-      transition: color 0.15s, transform 0.15s;
+    .work::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% + 7px);
+      left: 0;
+      width: max-content;
+      max-width: 200px;
+      background: #111;
+      color: #fff;
+      font-size: 11px;
+      line-height: 1.5;
+      padding: 4px 8px;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
     }
-    .work:hover .arrow { color: #111; transform: translateX(2px); }
-
-    .work-desc { color: #888; font-size: 12.5px; transition: color 0.15s; }
+    .work:hover::after { opacity: 1; }
 
     .icon-link[data-tip]::after {
       content: attr(data-tip);
@@ -133,25 +140,10 @@
   </p>
 
   <div class="works">
-    <a class="work" href="https://dereverb.jenyadoesapps.com/" target="_blank" rel="noopener">
-      <span class="work-title">dereverb / denoise <span class="arrow">&#8599;</span></span>
-      <span class="work-desc">remove reverb and noise from audio, in the browser</span>
-    </a>
-
-    <a class="work" href="https://github.com/jenyanepoimannykh-it/dereverb-vst3" target="_blank" rel="noopener">
-      <span class="work-title">dereverb vst3 / au <span class="arrow">&#8599;</span></span>
-      <span class="work-desc">the same engine as a plugin for your daw</span>
-    </a>
-
-    <a class="work" href="https://chromewebstore.google.com/detail/tab-subtitles/egbheogpojgfgidcjffloaepeefbfobd" target="_blank" rel="noopener">
-      <span class="work-title">private captions <span class="arrow">&#8599;</span></span>
-      <span class="work-desc">private captions for your browser</span>
-    </a>
-
-    <a class="work" href="https://github.com/hypnagonia/rag" target="_blank" rel="noopener">
-      <span class="work-title">rag <span class="arrow">&#8599;</span></span>
-      <span class="work-desc">a compact retrieval-augmented generation setup</span>
-    </a>
+    <a class="work" data-tip="remove reverb and noise from audio, in the browser" href="https://dereverb.jenyadoesapps.com/" target="_blank" rel="noopener">dereverb / denoise</a>,
+    <a class="work" data-tip="the same engine as a plugin for your daw" href="https://github.com/jenyanepoimannykh-it/dereverb-vst3" target="_blank" rel="noopener">dereverb vst3 / au</a>,
+    <a class="work" data-tip="private captions for your browser" href="https://chromewebstore.google.com/detail/tab-subtitles/egbheogpojgfgidcjffloaepeefbfobd" target="_blank" rel="noopener">private captions</a>,
+    <a class="work" data-tip="a compact retrieval-augmented generation setup" href="https://github.com/hypnagonia/rag" target="_blank" rel="noopener">rag</a>
   </div>
 
   <div class="contact">
