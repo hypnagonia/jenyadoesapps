@@ -72,6 +72,10 @@
       color: #444;
     }
 
+    .group { padding-left: 6.5em; text-indent: -6.5em; }
+    .cat { display: inline-block; width: 6.5em; text-indent: 0; color: #999; }
+    .work::after { text-indent: 0; }
+
     .work {
       color: #111;
       text-decoration: none;
@@ -132,12 +136,25 @@
   </p>
 
   <div class="works">
-    <a class="work" data-tip="remove reverb and noise from audio, in the browser" href="https://dereverb.jenyadoesapps.com/" target="_blank" rel="noopener">dereverb / denoise</a>,
-    <a class="work" data-tip="the same engine as a plugin for your daw" href="https://github.com/jenyanepoimannykh-it/dereverb-vst3" target="_blank" rel="noopener">dereverb vst3 / au</a>,
-    <a class="work" data-tip="private captions for your browser" href="https://chromewebstore.google.com/detail/tab-subtitles/egbheogpojgfgidcjffloaepeefbfobd" target="_blank" rel="noopener">private captions</a>,
-    <a class="work" data-tip="edit photos right in the browser" href="https://img.jenyadoesapps.com/" target="_blank" rel="noopener">photo editor</a>,
-    <a class="work" data-tip="trust scores for p2p peers" href="https://eigentrust.jenyadoesapps.com/" target="_blank" rel="noopener">eigentrust</a>,
-    <a class="work" data-tip="a compact retrieval-augmented generation setup" href="https://github.com/hypnagonia/rag" target="_blank" rel="noopener">rag</a>
+    <div class="group">
+      <span class="cat">//audio</span>
+      <a class="work" data-tip="remove reverb and noise from audio, in the browser" href="https://dereverb.jenyadoesapps.com/" target="_blank" rel="noopener">dereverb / denoise</a>,
+      <a class="work" data-tip="the same engine as a plugin for your daw" href="https://github.com/jenyanepoimannykh-it/dereverb-vst3" target="_blank" rel="noopener">dereverb vst3 / au</a>,
+      <a class="work" data-tip="a daw in your browser" href="https://daw.jenyadoesapps.com/" target="_blank" rel="noopener">daw</a>
+    </div>
+    <div class="group">
+      <span class="cat">//chrome</span>
+      <a class="work" data-tip="private captions for your browser" href="https://chromewebstore.google.com/detail/tab-subtitles/egbheogpojgfgidcjffloaepeefbfobd" target="_blank" rel="noopener">private captions</a>
+    </div>
+    <div class="group">
+      <span class="cat">//visual</span>
+      <a class="work" data-tip="edit photos right in the browser" href="https://img.jenyadoesapps.com/" target="_blank" rel="noopener">photo editor</a>
+    </div>
+    <div class="group">
+      <span class="cat">//software</span>
+      <a class="work" data-tip="trust scores for p2p peers" href="https://eigentrust.jenyadoesapps.com/" target="_blank" rel="noopener">eigentrust</a>,
+      <a class="work" data-tip="a compact retrieval-augmented generation setup" href="https://github.com/hypnagonia/rag" target="_blank" rel="noopener">rag</a>
+    </div>
   </div>
 
   <div class="contact">
